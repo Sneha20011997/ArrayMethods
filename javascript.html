@@ -1,0 +1,36 @@
+<html>
+    
+    <body>
+            <h1>Book:</h1>
+            <div id="listofBooks"></div>
+            <h1>Removed Books:</h1>
+            <div id="removedbook"></div>
+            <h1>New Books:</h1>
+            <div id="newbook"></div>
+</body>
+    <script>
+        var books =["book1","book2","book3","book4","book5"]
+        document.getElementById("listofBooks").innerHTML =books;
+        var removedbook = books.pop();
+        document.getElementById("removedbook").innerHTML =removedbook;
+        document.getElementById("listofBooks").innerHTML =books;
+        
+        var newbook =books.push("book6");
+        document.getElementById("newbook").innerHTML =newbook;
+        document.getElementById("removedbook").innerHTML =removedbook;
+       /*books.shift();
+     document.getElementById("listofBooks").innerHTML =books;*/
+      /* books.unshift("book6");
+       document.getElementById("listofBooks").innerHTML =books;
+       */
+      //splice In array
+      /*  books.splice(3,0,"book6","book7","book8");
+        document.getElementById("listofBooks").innerHTML =books;
+        */
+        //books.splice(3,1,"book6","book7","book8");
+        //books.splice(2,2);
+       //document.getElementById("listofBooks").innerHTML =books;
+        var newbooks = books.slice(2,4);
+        document.getElementById("listofBooks").innerHTML = newbooks;   
+    </script>
+</html>
